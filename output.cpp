@@ -15,24 +15,24 @@ typedef pair<ll, P> TP;
 typedef pair<string, string> PS;
 
 class calc {
- public:
+public:
   char c;
 
   void solve() {
     cin >> c;
     switch (c) {
-      case 'A':
-        cout << 'T';
-        break;
-      case 'T':
-        cout << 'A';
-        break;
-      case 'C':
-        cout << 'G';
-        break;
-      case 'G':
-        cout << 'C';
-        break;
+    case 'A':
+      cout << 'T';
+      break;
+    case 'T':
+      cout << 'A';
+      break;
+    case 'C':
+      cout << 'G';
+      break;
+    case 'G':
+      cout << 'C';
+      break;
     };
   };
 };
