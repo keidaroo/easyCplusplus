@@ -14,6 +14,8 @@ typedef pair<ll, ll> P
 typedef pair<ll, P> TP
 typedef pair<string, string> PS
 
+# wazzup
+
 class calc:
   public:
   char c

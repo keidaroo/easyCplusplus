@@ -51,6 +51,20 @@ class LineInfo {
     return elems;
   }
 
+  // コメント出会った場合は // を付け加え、
+  // そうでない場合は ; を文末に加える。
+  // vectorのなかみも書き換えちゃう
+  string checkComment(vector<string>& splittedLine) {
+    if (splittedLine[0][0] == '#') {
+      splittedLine[0].erase(splittedLine[0].begin());
+      splittedLine.insert(splittedLine.begin(), "//");
+    } else {
+      splittedLine.push_back(";");
+    }
+
+    return mixIn(splittedLine);
+  }
+
  public:
   const int tabSpaceWidth = 2;
   string line;
@@ -109,7 +123,7 @@ class LineInfo {
     } else {
       type = normal;
       indentInfo[nowIndentNum] = normal;
-      ret += line + ";";
+      ret = checkComment(splittedLine);
     }
     return ret;
   }
